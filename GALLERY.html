@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MBTAROT</title>
+  <div class="w3-main w3-content w3-padding" style="max-width:80px;margin-top:20px">
+</div>
+<div class="img"><img src="../Artmarina/img/banner.png"style="width:75%;margin-left:14%"></div>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Faster+One|Monoton');
+  body {
+    width: 100%;
+    height: 100%;
+    background: url("https://s3.amazonaws.com/ritalbradley-dev-photos/twinkle-back.gif");
+  }
+</style>
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:fantasy;
+  font color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px 600px;
+}
+
+.img1 { background-image: url("../Artmarina/img/banner.png"); }
+
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: red;
+  font-weight:;
+  font-size: 50px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  flood-color: white;
+  font-family:fantasy;
+}
+
+</style>
+
+<div class="topnav">
+  <a href="index.html">HOME</a>
+  <a href="MAJOR ARCANAS.html">MAJOR ARCANAS</a>
+  <a href="MINOR ARCANAS.html">MINOR ARCANAS</a>
+  <a href="GALLERY.html">GALLERY</a>
+
+ 
+</div>
+
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Lucida Calligraphy;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+
+<style>
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ font-size: 20px;
+ font color: white;
+}
+</style>
+    <div class="footer">
+  
+<style type="text/css">
+    img {
+    border-radius: 10%;
+}
+    #scroller_container {
+        padding: 2px;
+        margin: 0 auto;
+        width: 700px;
+        overflow: hidden;
+        line-height:0;
+        font-size:0;
+    }
+    #scroller_container div {
+        float: left;
+        vertical-align: baseline;
+    }
+    #scroller_container>div {
+        position: relative;
+        white-space: nowrap;
+        width: 60%;
+        padding: 22px 0;
+    }
+    #scroller_container>div a,
+    #scroller_container>div a img {
+        padding: 0;
+        margin:0;
+    }
+    #scroller_container>div a img {
+        margin: 0 1px;
+        border:0;
+    }
+</style>
+
+<script type="text/javascript">
+    var _scroller;
+    _scroller = function () { 
+        return{
+            speed:10, 
+            direct:-1,
+            position:0,
+            t:null,
+            
+            init: function () {
+                var el;
+                
+                el = document.getElementById('scroller_container');
+                _scroller.addEvent(el, 'mousewheel', _scroller.wheel);
+                _scroller.addEvent(el, 'DOMMouseScroll', _scroller.wheel);
+
+                _scroller.timer(_scroller.direct); 
+            },
+
+            
+            wheel: function (e) {
+                _scroller.stop();
+                e = e ? e : window.event;
+                
+                var wheelData = e.detail ? e.detail * -1 : e.wheelDelta / 40;
+
+                
+                if (Math.abs(wheelData) > 100) {
+                    wheelData = Math.round(wheelData / 100);
+                }
+                
+                _scroller.direct=wheelData>0?1:-1;
+                _scroller.timer(_scroller.direct);
+                if (window.event) {
+                    e.cancelBubble = true;
+                    e.returnValue = false;
+                    e.cancel = true;
+                }
+                if (e.stopPropagation && e.preventDefault) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+                return false;
+            },
+
+            
+            scroll: function (wheel) {
+                var el = document.getElementById('scroller_container').firstElementChild;
+                var o, oi, width;
+                _scroller.position += wheel;
+                if (wheel>0) {
+                    if (_scroller.position >= 0) { 
+                        o=el;
+                        oi=o.lastElementChild; 
+                        width=oi.firstElementChild.clientWidth; 
+                        o.insertBefore(oi,o.firstElementChild);
+                        _scroller.position-=width;
+                   }
+                }
+                else {
+                    o=el;
+                    oi=o.firstElementChild; 
+                    width=oi.firstElementChild.clientWidth; 
+                    if(_scroller.position < -width){ 
+                        o.appendChild(oi);
+                        _scroller.position+=width;
+                    }
+                }
+                el.style.left = _scroller.position + 'px';
+            },
+
+          
+            timer: function (wheel) {
+                _scroller.stop();
+                _scroller.t = setInterval("_scroller.scroll(" + wheel + ");", _scroller.speed);
+            },
+
+         
+            stop: function () {
+                if (_scroller.t != null) {
+                    clearInterval(_scroller.t);
+                    _scroller.t = null;
+                }
+            },
+
+        
+            addEvent:function(el, evType, fn, useCapture) {
+                if (el.addEventListener) {
+                    el.addEventListener(evType, fn, useCapture);
+                }else if (el.attachEvent) {
+                    var r = el.attachEvent('on' + evType, fn);
+                }else el['on' + evType] = fn;
+             }
+        };
+    }();
+    
+    window.onload=function(){setTimeout(_scroller.init,100);}; 
+</script>
+<div id="scroller_container" onmousemove="_scroller.stop();" onmouseout="_scroller.timer(_scroller.direct);">
+    <div>
+    <a href="../Artmarina/major/0rf.png"onclick="return!1"><img src="../Artmarina/major/0rf.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/1rm.png"onclick="return!1"><img src="../Artmarina/major/1rm.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/2rp.png"onclick="return!1"><img src="../Artmarina/major/2rp.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/3re.png"onclick="return!1"><img src="../Artmarina/major/3re.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/4re.png"onclick="return!1"><img src="../Artmarina/major/4re.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/5rp.png"onclick="return!1"><img src="../Artmarina/major/5rp.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/6rl.png"onclick="return!1"><img src="../Artmarina/major/6rl.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/7rc.png"onclick="return!1"><img src="../Artmarina/major/7rc.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/8rj.png"onclick="return!1"><img src="../Artmarina/major/8rj.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/9rh.png"onclick="return!1"><img src="../Artmarina/major/9rh.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/10rf.png"onclick="return!1"><img src="../Artmarina/major/10rf.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/11rs.png"onclick="return!1"><img src="../Artmarina/major/11rs.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/12rh.png"onclick="return!1"><img src="../Artmarina/major/12rh.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/13rd.png"onclick="return!1"><img src="../Artmarina/major/13rd.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/14rt.png"onclick="return!1"><img src="../Artmarina/major/14rt.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/15rd.png"onclick="return!1"><img src="../Artmarina/major/15rd.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/16rt.png"onclick="return!1"><img src="../Artmarina/major/16rt.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/17rs.png"onclick="return!1"><img src="../Artmarina/major/17rs.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/18rm.png"onclick="return!1"><img src="../Artmarina/major/18rm.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/19rs.png"onclick="return!1"><img src="../Artmarina/major/19rs.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/20rj.png"onclick="return!1"><img src="../Artmarina/major/20rj.png" width="100%" border="6" bgcolor="black"alt=""></a>
+    <a href="../Artmarina/major/21rw.png"onclick="return!1"><img src="../Artmarina/major/21rw.png" width="100%" border="6" bgcolor="black"alt=""></a>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</head>
+  
+
+      <hr>
+<a href = "https://www.artmarinabozin.com">artmarinabozin.com</a>
+    <div><b>
+<a href = "https://www.facebook.com/mbozin">facebook.com/mbozin</a>
+    <div><b>
+<a href = "https://www.instagram.com/artbozin/">instagram.com/artbozin</a>
+<br><font color="white">Galleries, dealers and individual art collectors can contact Marina by email for more information at:<br>
+<a href="mailto:mbozin@yahoo.com">mbozin@yahoo.com</a>
+</h4>
+<br>
+
+</div>
+
+    <small>
+      <i><font color="white">Copyright &copy 2018 Artmarinabozin.com</font></i></small>
+      <br>
+      <br>
+
+
+</body>
+</html>
